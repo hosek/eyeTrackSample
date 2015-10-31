@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <org.opencv.android.JavaCameraView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/fd_activity_surface_view" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:onClick="onRecreateClick"
+        android:text="Recreate" />
+
+    <TextView
+        android:id="@+id/method"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seekbars"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:text="method"
+        android:textColor="@android:color/white"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/seekbars"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        >
+
+        <SeekBar
+            android:id="@+id/methodSeekBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:max="5"
+            android:paddingLeft="5dip"
+            android:paddingRight="10dip"
+            android:progress="500" >
+        </SeekBar>
+
+    </LinearLayout>
+</RelativeLayout>
